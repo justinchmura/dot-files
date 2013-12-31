@@ -1,0 +1,7 @@
+[user]
+	name = Justin Chmura
+	email = justin.chmura@gmail.com
+[github]
+  user = justinchmura
+[credential]
+	helper = osxkeychain
