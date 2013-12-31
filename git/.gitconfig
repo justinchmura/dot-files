@@ -1,7 +1,10 @@
 [user]
-	name = Justin Chmura
-	email = justin.chmura@gmail.com
+  name = Justin Chmura
+  email = justin.chmura@gmail.com
 [github]
   user = justinchmura
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+[core]
+  editor = vim -f
+  excludesfile = /Users/chris/.global_gitignore
