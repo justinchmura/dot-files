@@ -21,4 +21,8 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set nowrap
-set ch=2                        "Make command line 2 lines high
+
+set laststatus=2 
+set statusline=%f               "Current path of file 
+set statusline+=%=              "Switch to right side 
+set statusline+=%l/%L           "Current Line/Total Lines 
