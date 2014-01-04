@@ -26,3 +26,5 @@ set laststatus=2
 set statusline=%f               "Current path of file 
 set statusline+=%=              "Switch to right side 
 set statusline+=%l/%L           "Current Line/Total Lines 
+
+colorscheme ir_black
