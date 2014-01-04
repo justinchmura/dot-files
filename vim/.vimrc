@@ -21,3 +21,4 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set nowrap
+set ch=2                        "Make command line 2 lines high
