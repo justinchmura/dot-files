@@ -1,4 +1,3 @@
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
@@ -11,6 +10,6 @@ function color_my_prompt {
   local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
   local __prompt_tail="\[\033[37m\]$"
   local __last_color="\[\033[00m\]"
-  export PS1="$__time $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+  export PS1="$__time $__cur_location $__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
 }
 color_my_prompt
