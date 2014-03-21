@@ -32,6 +32,8 @@ set splitright                  " New windows goes right
 set relativenumber              " Use relative line numbers. Current line is still in status bar.
 au BufReadPost,BufNewFile * set relativenumber
 
+execute pathogen#infect()
+
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 
