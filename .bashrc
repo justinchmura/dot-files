@@ -1,6 +1,7 @@
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-:
+export PATH="/usr/local/git/bin:/usr/local/sbin:$PATH"
+
 function color_my_prompt {
   local __time="\[\e[00;30m\]\@\[\e[0m\]"
   local __cur_location="\[\033[00;34m\]\w"
@@ -12,8 +13,11 @@ function color_my_prompt {
 }
 color_my_prompt
 
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
 # added by travis gem
 [ -f /Users/justin/.travis/travis.sh ] && source /Users/justin/.travis/travis.sh
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
