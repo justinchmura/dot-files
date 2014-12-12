@@ -28,3 +28,5 @@
   amend = commit --amend -C HEAD
   co = checkout
   ci = commit
+[push]
+	default = simple
