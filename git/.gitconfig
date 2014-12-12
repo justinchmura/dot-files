@@ -30,3 +30,5 @@
   ci = commit
 [push]
   default = simple
+[color]
+  ui = true
