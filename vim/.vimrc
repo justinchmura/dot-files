@@ -28,10 +28,6 @@ set incsearch                   " Highlight dynamically as pattern is typed.
 set splitbelow                  " New window goes below
 set splitright                  " New windows goes right
 
-" Set relative line numbers
-set relativenumber              " Use relative line numbers. Current line is still in status bar.
-au BufReadPost,BufNewFile * set relativenumber
-
 execute pathogen#infect()
 
 " JSON
@@ -43,9 +39,15 @@ au BufRead,BufNewFile *.jade set ft=jade syntax=jade
 " Common Ruby files
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
 
+" Go files
+au BufRead,BufNewFile *.go set ft=go syntax=go
+
 set laststatus=2 
 set statusline=%f               "Current path of file 
 set statusline+=%=              "Switch to right side 
 set statusline+=%l/%L           "Current Line/Total Lines 
+
+" CtrlP ignore folders
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 colorscheme jellybeans
