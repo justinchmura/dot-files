@@ -7,8 +7,20 @@
   helper = osxkeychain
 [core]
   editor = vim -f
-  excludesfile = /Users/chris/.global_gitignore
+  excludesfile = /Users/justin/.global_gitignore
 [alias]
+  
+  # Status with short format
+  st = status -s
+
+  # Show the diff between the latest commit and the current state
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative
   hist = log --graph --pretty=format:'%h %ad | %s%d [%an]' --date=short
   last = log -1 HEAD
@@ -16,5 +28,3 @@
   amend = commit --amend -C HEAD
   co = checkout
   ci = commit
-  st = status
-  br = branch
