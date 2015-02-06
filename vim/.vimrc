@@ -50,4 +50,7 @@ set statusline+=%l/%L           "Current Line/Total Lines
 " CtrlP ignore folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" NERDTree
+map <silent> <C-n> :NERDTreeToggle<CR>
+
 colorscheme jellybeans
