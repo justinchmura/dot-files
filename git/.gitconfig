@@ -47,8 +47,8 @@
 	local = green
 	remote = yellow
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold # line info
+	meta = cyan bold
+	frag = yellow bold # line info
 	old = red # deletions
 	new = green # additions
 [color "status"]
