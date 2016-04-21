@@ -28,6 +28,8 @@
 	last = log -1 HEAD
 	unstage = reset HEAD --
 	amend = commit --amend -C HEAD
+	
+	branches = branches -a
 
 	ds = diff-tree --no-commit-id --name-only -r HEAD~1
 	df = diff --ignore-space-at-eol -b -w
@@ -37,13 +39,13 @@
 	autocrlf = true
 	excludesfile = C:\\Users\\justinc\\Documents\\gitignore_global.txt
 [push]
-  default = simple
+	default = simple
 [color]
 	ui = true
 [color "branch"]
 	current = cyan bold
-	local = yellow
-	remote = green
+	local = green
+	remote = yellow
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold # line info
