@@ -52,6 +52,6 @@
 	old = red # deletions
 	new = green # additions
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
