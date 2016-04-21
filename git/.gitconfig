@@ -10,7 +10,7 @@
 	a = add --all
 	
 	# Show the diff between the latest commit and the current state
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	ci = commit -m
 	fa = fetch --all --prune
