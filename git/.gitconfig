@@ -1,48 +1,55 @@
+# This is Git's per-user configuration file.
 [user]
-  name = Justin Chmura
-  email = justin.chmura@gmail.com
+	name = Justin Chmura
+	email = justin.chmura@gmail.com
 [github]
-  user = justinchmura
-[credential]
-  helper = osxkeychain
-[core]
-  editor = vim -f
-  excludesfile = /Users/justin/.global_gitignore
+	user = justinchmura
 [alias]
-  
-  # Status with short format
-  st = status -s
-
-  # Show the diff between the latest commit and the current state
+	s = status -sb
+	c = commit
+	a = add --all
+	
+	# Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-  # Show verbose output about tags, branches or remotes
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
-  l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	lg = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
-  ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative
-  hist = log --graph --pretty=format:'%h %ad | %s%d [%an]' --date=short
-  last = log -1 HEAD
-  unstage = reset HEAD --
-  amend = commit --amend -C HEAD
-  co = checkout
-  ci = commit
+	ci = commit -m
+	fa = fetch --all --prune
+	fo = fetch origin
+	ec = config --global --edit
+	cb = checkout -b
+	pf = push --force
+
+	l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn,\\ %cd]" --date=relative --decorate
+	lg = log --graph --full-history --color --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn,\\ %cd]" --date=relative
+	lg2 = log --graph --full-history --color --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn,\\ %cd]"
+	l5 = log --graph --full-history --color --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn,\\ %cd]" --date=relative -5
+	la = log --graph --full-history --color --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn,\\ %cd]" --date=relative --all
+
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	amend = commit --amend -C HEAD
+
+	ds = diff-tree --no-commit-id --name-only -r HEAD~1
+	df = diff --ignore-space-at-eol -b -w
+	kill = !git reset --hard HEAD && git clean -df
+[core]
+	editor = vim -f
+	autocrlf = true
+	excludesfile = C:\\Users\\justinc\\Documents\\gitignore_global.txt
 [push]
   default = simple
 [color]
-  ui = true
+	ui = true
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = cyan bold
+	local = yellow
+	remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold # line info
-  old = red # deletions
-  new = green # additions
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
