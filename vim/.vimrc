@@ -22,9 +22,7 @@ set tabstop=2
 set expandtab
 set nowrap
 
-set hlsearch                    " Highlight searches
 set ignorecase                  " Ignore case of searches.
-set incsearch                   " Highlight dynamically as pattern is typed.
 set splitbelow                  " New window goes below
 set splitright                  " New windows goes right
 
