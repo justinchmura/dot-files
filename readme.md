@@ -1,10 +1,6 @@
-## OSX Dot Files
+## Simple Dot Files
 
-Share & suggest...
-
-## Installation
-
-Haven't figured that out yet. :)
+Just a collection of non-vim dot files that I wanted to hold on to.
 
 ## LICENSE
 
